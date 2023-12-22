@@ -6,9 +6,9 @@ exports.createUser = async (req, res) => {
         const checkUser = await User.findOne({ email });
         if (checkUser) {
             res
-                .status(400)
+                .status(200)
                 .json({
-                    success: false,
+                    success: true,
                     message: 'User Exists',
                     userId: checkUser._id
                 })
