@@ -15,7 +15,8 @@ exports.createTheme = async (req, res) => {
         .status(200)
         .json({
             success: true,
-            message: 'Added Output'
+            message: 'Added Output',
+            outputId: createOutput._id
         })
     }
     catch (error) {
